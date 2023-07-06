@@ -8,10 +8,10 @@ public class Main {
         // реализуйте алгоритм здесь
         UserService userService = new UserServiceImpl();
         userService.createUsersTable();
-        userService.saveUser("name1", "Joss", (byte) 45);
-        userService.saveUser("name2", "Johnson", (byte) 24);
-        userService.saveUser("name3", "Petrov", (byte) 34);
-        userService.saveUser("name4", "Papaev", (byte) 63);
+        userService.saveUser("name1", "nam1", (byte) 10);
+        userService.saveUser("name2", "nam2", (byte) 11);
+        userService.saveUser("name3", "nam3", (byte) 12);
+        userService.saveUser("name4", "nam4", (byte) 13);
         userService.removeUserById(2);
         userService.getAllUsers();
         userService.cleanUsersTable();
