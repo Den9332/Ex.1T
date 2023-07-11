@@ -11,17 +11,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
-    private final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS users (id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY , " +
+    private final static String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS users (id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY , " +
             "name VARCHAR(30) NOT NULL, " +
             "lastName VARCHAR(30) NOT NULL, " +
             "age TINYINT NOT NULL)";
-    private final String DROP_TABLE = "DROP TABLE IF EXISTS users";
-    private final String SAVE_USER = "INSERT INTO users (name, lastName, age) VALUES (?, ?, ?)";
-    private final String REMOVE_USER = "DELETE FROM users where id = ?";
-    private final String GET_USERS = "SELECT * FROM users";
-    private final String CLEAN_USERS = "TRUNCATE TABLE users";
+    private final static String DROP_TABLE = "DROP TABLE IF EXISTS users";
+    private final static String SAVE_USER = "INSERT INTO users (name, lastName, age) VALUES (?, ?, ?)";
+    private final static String REMOVE_USER = "DELETE FROM users where id = ?";
+    private final static String GET_USERS = "SELECT * FROM users";
+    private final static String CLEAN_USERS = "TRUNCATE TABLE users";
     private List<User> allUsers = new ArrayList<>();
-    private Connection connection=Util.getConnection();
+    private Connection connection = Util.getConnection();
 
     public UserDaoJDBCImpl() {
     }
